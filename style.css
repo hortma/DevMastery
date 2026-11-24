@@ -1,18 +1,304 @@
+:root {
+    --primary-color: #F6F6F6;
+    --secondary-color: #6626E1;
+    --third-color: #000A24;
+    --fourth-color: #A8ADC9;
+}
+
 * {
     padding: 0;
     margin: 0;
 
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
     box-sizing: content-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+header {
+    background-color:var(--third-color);
+    padding: 15px;
+    z-index: 1;
+}
+
+footer {
+    background-color: var(--third-color);
+    padding: 15px;
+    z-index: 1;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    border: 0;
+}
+
+p {
+    color: var(--third-color)
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.flex-gap {
+    gap: 15px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vertical-flex {
+    flex-direction: column;
+}
+
+.dark-input {
+    background-color: #242C44;
+    border: 0;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.connected-submit {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.weight-450 {
+    font-weight: 450;
+}
+
+.lighter {
+    font-weight:lighter;
+}
+
+.bold {
+    font-weight:bold;
+}
+
+.bold {
+    font-weight:bolder;
+}
+
+.big-font {
+    font-size: large;
+}
+
+.white-color {
+    color: var(--primary-color);
+}
+
+.purple-color {
+    color: var(--secondary-color);
+}
+
+.black-color {
+    color: var(--third-color);
+}
+
+.grey-color {
+    color: var(--fourth-color);
+}
+
+.gradient-color {
+    background-image: linear-gradient(75deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
 }
 
 .hero-section {
     background-image: url(../images/fundo.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+
+    padding: 15px;
+}
+
+.hero-section-sections {
+    background: rgba(0, 0, 0, 0.15);
+        
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+        
+    border: 3px solid rgba(125, 85, 189, 0.3);
+    border-radius: 16px;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.computer {
+    position: static;
+    z-index: 2;
+    opacity: 80%;
+    height: 300px;
+    align-self: end;
+    justify-self: start;
+    margin-left: 40px;
+}
+
+.hero-left {
+    display: grid;
+}
+
+.hero-left>* {
+    grid-area: 1 / 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    left: 50px;
+    align-self: start;
+}
+
+.hero-text-fluxo {
+    position: relative;
+    left: 50px;
+    font-size: 2rem;
+}
+
+.hero-text-desenvolvimento {
+    position: relative;
+    font-size: 4rem;
+}
+
+.hero-text-moderno {
+    position: relative;
+    left: 450px;
+    font-size: 3rem;
 }
 
 .profile-picture {
     border-radius: 100%;
     
-    aspect-ratio: 1 / 1
+    aspect-ratio: 1 / 1;
+
+    height: 50px;
+}
+
+.enterprise-icon {
+    height: 50px;
+}
+
+.section-icon {
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    object-position: center;
+
+    height: 50px;
+}
+
+.section-header {
+    font-size: medium;
+}
+
+.relative-position {
+    position: relative;
+}
+
+.laptop-image {
+    height: 100px;
+}
+
+.book-image {
+    height: 100px;
+}
+
+.xp-image {
+    height: 100px;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.main-content {
+    width: 80%;
+}
+
+aside {
+    width: 20%;
+}
+
+.ball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    color: var(--primary-color);
+}
+
+.ball-blue {
+    background-color: blue;
+}
+
+.ball-green {
+    background-color: green;
+}
+
+.ball-yellow {
+    background-color: yellow;
+}
+
+.ball-red {
+    background-color: red;
+}
+
+.ball-teal {
+    background-color: teal;
+}
+
+.ball-line {
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 40px;
+}
+
+.ball-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 13px;
+    width: 4px;
+    background-color: var(--fourth-color);
+}
+
+.ball-line-last::before {
+    display: none;
 }
