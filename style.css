@@ -1,15 +1,18 @@
 :root {
     --primary-color: #F6F6F6;
-    --secondary-color: #6626E1;
-    --third-color: #000A24;
+    --secondary-color: #3926e1;
+    --third-color: #2e2b31;
     --fourth-color: #A8ADC9;
     --fitfh-color: #d3d7ec;
+    --sixth-color: #000A24;
 
     --blue-color: #295CFB;
     --green-color: #139055;
     --yellow-color: #FE9E19;
     --red-color: #FC4B51;
     --teal-color: #35BDBD;
+
+    --border-radius: 8px;
 }
 
 * {
@@ -32,18 +35,25 @@ body {
 }
 
 header {
-    background-color: var(--third-color);
+    background-color: var(--sixth-color);
     padding: 15px;
     z-index: 1;
 }
 
 footer {
-    background-color: var(--third-color);
+    background-color: var(--sixth-color);
     padding: 15px;
     z-index: 1;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+summary,
+td,
+label,
+details {
     color: var(--third-color)
 }
 
@@ -83,8 +93,23 @@ li {
     padding: 5px;
 }
 
+input {
+    border: 2px solid var(--fitfh-color);
+    color: var(--fitfh-color);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+input::placeholder {
+    color: var(--fitfh-color);
+}
+
 .weight-450 {
     font-weight: 450;
+}
+
+.tinier-font {
+    font-size: small;
 }
 
 .lighter {
@@ -146,8 +171,8 @@ li {
     gap: 15px;
     padding: 15px;
 
-    width: 300px;
-    height: 80px;
+    width: 250px;
+    height: 60px;
 
     background: rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(12px);
@@ -285,9 +310,13 @@ li {
 .btn {
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     padding: 5px;
     border: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-content {
@@ -296,10 +325,12 @@ li {
 }
 
 aside {
-    width: 18%;
+    width: 17%;
     display: flex;
     flex-direction: column;
     padding: 1%;
+
+    border-right: 2px solid var(--fitfh-color);
 }
 
 .ball {
@@ -393,6 +424,22 @@ aside {
     border: 2px solid var(--fitfh-color);
     border-radius: 10px;
     padding: 10px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.row-section {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.idk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .xp-list {

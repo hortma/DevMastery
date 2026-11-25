@@ -91,9 +91,9 @@
             <div class="flex-2 vertical-flex flex-gap">
                 <section class="hero-section-sections flex-2">
                     <img class="section-icon" src="images/layers.png">
-                    <div>
-                        <h2 class="white-color section-header">Dominando Z-index</h2>
-                        <p class="white-color">
+                    <div class="flex-2 flex-gap">
+                        <h2 class="white-color section-header bold">Dominando Z-index</h2>
+                        <p class="white-color tinier-font">
                             Aprenda o poder do
                             posicionamento e
                             empilhamento de elementos.
@@ -103,9 +103,9 @@
 
                 <section class="hero-section-sections flex-2">
                     <img class="section-icon" src="images/3d.png">
-                    <div>
-                        <h2 class="white-color section-header">Camada Inferior</h2>
-                        <p class="white-color">
+                    <div class="flex-2 flex-gap">
+                        <h2 class="white-color section-header bold">Camada Inferior</h2>
+                        <p class="white-color tinier-font">
                             Esta camada está na
                             camada mais baixa
                             (z-index: 0).
@@ -169,46 +169,60 @@
                             mudanças e maior transpência para todos.
                         </p>
 
-                        <section>
-                            <i class="fa-solid fa-rectangle-list blue-color"></i>
-                            <h3>Product Backlog</h3>
-                            <p>
-                                Lista priorizada de
-                                funcionalidades e
-                                requisitos do produto.
-                            </p>
-                        </section>
+                        <div class="flex-gap idk">
+                            <section class="regular-section row-section">
+                                <i class="fa-solid fa-rectangle-list blue-color"></i>
+                                <div>
+                                    <h3 class="bold">Product Backlog</h3>
+                                    <p>
+                                        Lista priorizada de
+                                        funcionalidades e
+                                        requisitos do produto.
+                                    </p>
+                                </div>
+                            </section>
 
-                        <section>
-                            <i class="fa-solid fa-arrows-rotate blue-color"></i>
-                            <h3>Sprint</h3>
-                            <p>
-                                Iterações de tempo fixo
-                                (geralmente 2-4 semanas).
-                            </p>
-                        </section>
+                            <section class="regular-section row-section">
+                                <i class="fa-solid fa-arrows-rotate blue-color"></i>
+                                <div>
+                                    <h3 class="bold">Sprint</h3>
+                                    <p>
+                                        Iterações de tempo fixo
+                                        (geralmente 2-4 semanas).
+                                    </p>
+                                </div>
+                            </section>
 
-                        <section>
-                            <i class="fa-solid fa-user-group blue-color"></i>
-                            <h3>Daily Scrum</h3>
-                            <p>
-                                Reunião diária de 15 min para
-                                sincronizar o time.
-                            </p>
-                        </section>
+                            <section class="regular-section row-section">
+                                <i class="fa-solid fa-user-group blue-color"></i>
+                                <div>
+                                    <h3 class="bold">Daily Scrum</h3>
+                                    <p>
+                                        Reunião diária de 15 min para
+                                        sincronizar o time.
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
                     </section>
                 </div>
 
                 <div class="ball-line">
                     <span class="ball ball-green">2</span>
                     <section class="regular-section" id="extremeprogramming">
-                        <h2 class="bold">2. Engenharia Extrema (XP)</h2>
-                        <p>
-                            A Extreme Programming (XP) é uma abordagem ágil que visa melhorar a qualidade do software e
-                            a capacidade de resposta a mudanças. Baseia-se em valores como comunicação, simplicidade,
-                            feedback e coragem para criar software de alta qualidade.
-                        </p>
-                        <img class="xp-image" src="images/xp.jpeg">
+                        <div class="idk">
+                            <div>
+                                <h2 class="bold">2. Engenharia Extrema (XP)</h2>
+                                <p>
+                                    A Extreme Programming (XP) é uma abordagem ágil que visa melhorar a qualidade do
+                                    software e
+                                    a capacidade de resposta a mudanças. Baseia-se em valores como comunicação,
+                                    simplicidade,
+                                    feedback e coragem para criar software de alta qualidade.
+                                </p>
+                            </div>
+                            <img class="xp-image" src="images/xp.jpeg">
+                        </div>
                         <ul class="xp-list">
                             <li>
                                 <i class="fa-solid fa-circle-check green-color"></i>
@@ -268,15 +282,17 @@
                             TDD é uma abordagem onde os testes são escritos antes do código de produção.
                             O ciclo Red-Green-Refactor garante código funcional, seguro e de qualidade.
                         </p>
-                        <div>
+                        <div class="idk flex-gap">
                             <section>
                                 <h3 class="red-color">Red</h3>
                                 <p>Escreva um teste que falha.</p>
                             </section>
+                            <i class="fa-solid fa-arrow-right-long"></i>
                             <section>
                                 <h3 class="green-color">Green</h3>
                                 <p>Escreva o código mínimo para passar no teste.</p>
                             </section>
+                            <i class="fa-solid fa-arrow-right-long"></i>
                             <section>
                                 <h3 class="purple-color">Refactor</h3>
                                 <p>Melhore o código mantendo os testes passando.</p>
@@ -411,12 +427,14 @@
                 </div>
 
                 <div class="ball-line ball-line-last">
-                    <section class="regular-section">
-                        <h2 class="bold">Comece seu Desafio!</h2>
-                        <p>
-                            Teste seus conhecimentos sobre as metodologias modernas
-                            e veja como está na sua compreensão sobre o assunto.
-                        </p>
+                    <section class="regular-section row-section">
+                        <div>
+                            <h2 class="bold">Comece seu Desafio!</h2>
+                            <p>
+                                Teste seus conhecimentos sobre as metodologias modernas
+                                e veja como está na sua compreensão sobre o assunto.
+                            </p>
+                        </div>
 
                         <a class="btn" href="">
                             <i class="fa-solid fa-circle-question"></i>
@@ -429,7 +447,7 @@
     </main>
 
     <footer>
-        <div class="flex">
+        <div class="idk">
             <div class="flex-2 vertical-flex">
                 <div class="flex-2 gap-logo">
                     <img class="enterprise-icon" src="images/logo.png">
@@ -451,41 +469,44 @@
                 </nav>
             </div>
 
-            <nav class="flex-2 vertical-flex">
-                <h2 class="white-color">Estudantes</h2>
-                <a href="">Cursos</a>
-                <a href="">Certificações</a>
-                <a href="">Portal do Aluno</a>
-                <a href="">Trilhas de Aprendizado</a>
-            </nav>
+            <div class="flex">
+                <nav class="flex-2 vertical-flex">
+                    <h2 class="white-color">Estudantes</h2>
+                    <a href="">Cursos</a>
+                    <a href="">Certificações</a>
+                    <a href="">Portal do Aluno</a>
+                    <a href="">Trilhas de Aprendizado</a>
+                </nav>
 
-            <nav class="flex-2 vertical-flex">
-                <h2 class="white-color">Recursos</h2>
-                <a href="">Documentação</a>
-                <a href="">Guias</a>
-                <a href="">Blog</a>
-                <a href="">Tutoriais</a>
-            </nav>
+                <nav class="flex-2 vertical-flex">
+                    <h2 class="white-color">Recursos</h2>
+                    <a href="">Documentação</a>
+                    <a href="">Guias</a>
+                    <a href="">Blog</a>
+                    <a href="">Tutoriais</a>
+                </nav>
 
-            <nav class="flex-2 vertical-flex">
-                <h2 class="white-color">Comunidade</h2>
-                <a href="">Fórum</a>
-                <a href="">Discord</a>
-                <a href="">Eventos</a>
-                <a href="">Contribua</a>
-            </nav>
+                <nav class="flex-2 vertical-flex">
+                    <h2 class="white-color">Comunidade</h2>
+                    <a href="">Fórum</a>
+                    <a href="">Discord</a>
+                    <a href="">Eventos</a>
+                    <a href="">Contribua</a>
+                </nav>
 
-            <form>
-                <h2 class="white-color">Newsletter</h2>
-                <p class="white-color">
-                    Receba conteúdos e novidades
-                    exclusivas toda semana.
-                </p>
-                <div class="flex-2">
-                    <input class="dark-input" placeholder="Seu melhor e-mail" type="email">
-                    <button class="btn connected-submit" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
-                </div>
-            </form>
+                <form>
+                    <h2 class="white-color">Newsletter</h2>
+                    <p class="white-color">
+                        Receba conteúdos e novidades
+                        exclusivas toda semana.
+                    </p>
+                    <div class="flex-2">
+                        <input class="dark-input" placeholder="Seu melhor e-mail" type="email">
+                        <button class="btn connected-submit" type="submit"><i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
         </div>
 
         <div class="flex">
