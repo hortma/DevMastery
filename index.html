@@ -4,441 +4,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevMastery</title>
+    <title>DevMastery EDU</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/4348ea3633.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="flex">
-        <div class="flex-2 gap-logo">
-            <img class="enterprise-icon" src="images/logo.png">
-            <p class="white-color weight-450 big-font">DevMastery<br><b class="purple-color weight-450">EDU</b></p>
-        </div>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <a href="#" class="brand">
+            <img class="brand__logo" src="images/logo.png" alt="Logo DevMastery EDU">
+            <span class="brand__name">DevMastery<br><strong class="brand__sub">EDU</strong></span>
+        </a>
 
-        <nav>
-            <ul class="flex flex-gap">
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-clipboard-list"></i>
-                        <span>Planejamento</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-microscope"></i>
-                        <span>Análise</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-shapes"></i>
-                        <span>Design</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-puzzle-piece"></i>
-                        <span>Implementação</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-circle-question"></i>
-                        <span>FAQ</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Contato</span>
-                    </a>
-                </li>
+        <nav class="main-nav" aria-label="Navegação principal">
+            <ul class="main-nav__list">
+                <li><a href="#scrum"><i class="fa-solid fa-clipboard-list"></i> Planejamento</a></li>
+                <li><a href="#extremeprogramming"><i class="fa-solid fa-microscope"></i> Análise</a></li>
+                <li><a href="#bdd"><i class="fa-solid fa-shapes"></i> Design</a></li>
+                <li><a href="#tdd"><i class="fa-solid fa-puzzle-piece"></i> Implementação</a></li>
+                <li><a href="#faq"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+                <li><a href="#contato"><i class="fa-solid fa-envelope"></i> Contato</a></li>
             </ul>
         </nav>
 
-        <div class="flex flex-gap">
-            <img to="profile-options" class="profile-picture" src="images/perfil.jpg">
-            <details>
-                <summary class="white-color" id="profile-options"></summary>
+        <div class="user-menu">
+            <img class="user-menu__avatar" src="images/perfil.jpg" alt="Foto de perfil">
+            <details class="user-menu__dropdown">
+                <summary aria-label="Opções do perfil"><i class="fa-solid fa-chevron-down"></i></summary>
             </details>
         </div>
     </header>
 
     <main>
-        <div class="hero-section flex">
-            <div class="hero-left">
-                <h1 class="white-color hero-text">
-                    <b class="hero-text-fluxo bolder">O Fluxo do</b>
-                    <br>
-                    <b class="hero-text-desenvolvimento bolder">Desenvolvimento</b>
-                    <br>
-                    <b class="hero-text-moderno bolder">Moderno</b>
+        <!-- ================= HERO SECTION ================= -->
+        <section class="hero">
+            <div class="hero__showcase">
+                <h1 class="hero__title">
+                    <span class="hero__title-top">O Fluxo do</span>
+                    <span class="hero__title-main">Desenvolvimento</span>
+                    <span class="hero__title-bottom">Moderno</span>
                 </h1>
-
-                <img class="computer" src="images/computador.png">
+                <img class="hero__laptop" src="images/computador.png" alt="Notebook exibindo código">
             </div>
 
-            <div class="flex-2 vertical-flex flex-gap">
-                <section class="hero-section-sections flex-2">
-                    <img class="section-icon" src="images/layers.png">
-                    <div class="flex-2 flex-gap">
-                        <h2 class="white-color section-header bold">Dominando Z-index</h2>
-                        <p class="white-color tinier-font">
-                            Aprenda o poder do
-                            posicionamento e
-                            empilhamento de elementos.
-                        </p>
+            <div class="hero__cards">
+                <article class="glass-card">
+                    <img class="glass-card__icon" src="images/layers.png" alt="Ícone de camadas">
+                    <div>
+                        <h2 class="glass-card__title">Dominando Z-index</h2>
+                        <p class="glass-card__text">Aprenda o poder do posicionamento e empilhamento de elementos.</p>
                     </div>
-                </section>
+                </article>
 
-                <section class="hero-section-sections flex-2">
-                    <img class="section-icon" src="images/3d.png">
-                    <div class="flex-2 flex-gap">
-                        <h2 class="white-color section-header bold">Camada Inferior</h2>
-                        <p class="white-color tinier-font">
-                            Esta camada está na
-                            camada mais baixa
-                            (z-index: 0).
-                        </p>
+                <article class="glass-card">
+                    <img class="glass-card__icon" src="images/3d.png" alt="Ícone 3D">
+                    <div>
+                        <h2 class="glass-card__title">Camada Inferior</h2>
+                        <p class="glass-card__text">Esta camada está na camada mais baixa (z-index: 0).</p>
                     </div>
-                </section>
+                </article>
             </div>
-        </div>
+        </section>
 
-        <div class="page-layout flex-2">
-            <aside class="flex-2">
-                <h2 class="grey-color">NAVEGAÇÃO</h2>
-                <nav class="flex-2 vertical-flex">
-                    <a class="purple-color" href="#scrum">
-                        <i class="fa-solid fa-house"></i>
-                        Scrum
-                    </a>
-                    <a class="black-color" href="#extremeprogramming">
-                        <i class="fa-solid fa-code"></i>
-                        Extreme Programming
-                    </a>
-                    <a class="black-color" href="#bdd">
-                        <i class="fa-solid fa-comments"></i>
-                        BDD
-                    </a>
-                    <a class="black-color" href="#tdd">
-                        <i class="fa-solid fa-flask"></i>
-                        TDD
-                    </a>
-                </nav>
+        <!-- ================= PAGE BODY (SIDEBAR + TIMELINE) ================= -->
+        <div class="page-layout">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="sidebar__group">
+                    <h2 class="sidebar__heading">NAVEGAÇÃO</h2>
+                    <nav class="sidebar__nav" aria-label="Metodologias">
+                        <a class="sidebar__link is-active" href="#scrum">
+                            <i class="fa-solid fa-house"></i> Scrum
+                        </a>
+                        <a class="sidebar__link" href="#extremeprogramming">
+                            <i class="fa-solid fa-code"></i> Extreme Programming
+                        </a>
+                        <a class="sidebar__link" href="#bdd">
+                            <i class="fa-solid fa-comments"></i> BDD
+                        </a>
+                        <a class="sidebar__link" href="#tdd">
+                            <i class="fa-solid fa-flask"></i> TDD
+                        </a>
+                    </nav>
+                </div>
 
-                <h2 class="grey-color">AÇÃO</h2>
-                <a class="btn" href="">
-                    <i class="fa-solid fa-circle-question"></i>
-                    Começar Quiz
-                </a>
+                <div class="sidebar__group">
+                    <h2 class="sidebar__heading">AÇÃO</h2>
+                    <a class="btn btn--full" href="#desafio">
+                        <i class="fa-solid fa-circle-question"></i> Começar Quiz
+                    </a>
+                </div>
 
-                <section>
-                    <img class="book-image" src="images/livro.jpeg">
-                    <h3 class="bold">Aprenda na pŕatica</h3>
-                    <p>
-                        Domine as Metodologias
-                        modernas de Desenvolvimento
-                        de software com exemplos
-                        reais e exercícios práticos.
+                <div class="promo-card">
+                    <img class="promo-card__image" src="images/livro.jpeg" alt="Ilustração de aprendizado prático">
+                    <h3 class="promo-card__title">Aprenda na prática</h3>
+                    <p class="promo-card__text">
+                        Domine as metodologias modernas de desenvolvimento de software com exemplos reais e exercícios
+                        práticos.
                     </p>
-                </section>
+                </div>
             </aside>
 
-            <div class="main-content">
-                <div class="ball-line">
-                    <span class="ball ball-blue">1</span>
-                    <section class="regular-section" id="scrum">
-                        <h2 class="bold">1. Planejamento Ágil (Scrum)</h2>
-                        <p>
+            <!-- MAIN CONTENT TIMELINE -->
+            <div class="timeline">
+                <!-- 1. SCRUM -->
+                <div class="timeline__item">
+                    <span class="timeline__badge badge--blue">1</span>
+                    <section class="card" id="scrum">
+                        <h2 class="card__title">1. Planejamento Ágil (Scrum)</h2>
+                        <p class="card__description">
                             O Scrum é um framework ágil para gerenciar projetos complexos, focando em entregas
                             incrementais
                             e colaboração contínua. Ele se baseia em ciclos curtos (Sprints) que permitem adaptação
-                            rápida
-                            às
-                            mudanças e maior transpência para todos.
+                            rápida às
+                            mudanças e maior transparência para todos.
                         </p>
 
-                        <div class="flex-gap idk">
-                            <section class="regular-section row-section">
-                                <i class="fa-solid fa-rectangle-list blue-color"></i>
+                        <div class="scrum-grid">
+                            <div class="sub-card">
+                                <i class="fa-solid fa-rectangle-list sub-card__icon text--blue"></i>
                                 <div>
-                                    <h3 class="bold">Product Backlog</h3>
-                                    <p>
-                                        Lista priorizada de
-                                        funcionalidades e
-                                        requisitos do produto.
-                                    </p>
+                                    <h3 class="sub-card__title">Product Backlog</h3>
+                                    <p class="sub-card__text">Lista priorizada de funcionalidades e requisitos do
+                                        produto.</p>
                                 </div>
-                            </section>
+                            </div>
 
-                            <section class="regular-section row-section">
-                                <i class="fa-solid fa-arrows-rotate blue-color"></i>
+                            <div class="sub-card">
+                                <i class="fa-solid fa-arrows-rotate sub-card__icon text--blue"></i>
                                 <div>
-                                    <h3 class="bold">Sprint</h3>
-                                    <p>
-                                        Iterações de tempo fixo
-                                        (geralmente 2-4 semanas).
-                                    </p>
+                                    <h3 class="sub-card__title">Sprint</h3>
+                                    <p class="sub-card__text">Iterações de tempo fixo (geralmente 2–4 semanas).</p>
                                 </div>
-                            </section>
+                            </div>
 
-                            <section class="regular-section row-section">
-                                <i class="fa-solid fa-user-group blue-color"></i>
+                            <div class="sub-card">
+                                <i class="fa-solid fa-user-group sub-card__icon text--blue"></i>
                                 <div>
-                                    <h3 class="bold">Daily Scrum</h3>
-                                    <p>
-                                        Reunião diária de 15 min para
-                                        sincronizar o time.
-                                    </p>
+                                    <h3 class="sub-card__title">Daily Scrum</h3>
+                                    <p class="sub-card__text">Reunião diária de 15 min para sincronizar o time.</p>
                                 </div>
-                            </section>
+                            </div>
                         </div>
                     </section>
                 </div>
 
-                <div class="ball-line">
-                    <span class="ball ball-green">2</span>
-                    <section class="regular-section" id="extremeprogramming">
-                        <div class="idk">
+                <!-- 2. EXTREME PROGRAMMING -->
+                <div class="timeline__item">
+                    <span class="timeline__badge badge--green">2</span>
+                    <section class="card" id="extremeprogramming">
+                        <div class="xp-header">
                             <div>
-                                <h2 class="bold">2. Engenharia Extrema (XP)</h2>
-                                <p>
+                                <h2 class="card__title">2. Engenharia Extrema (XP)</h2>
+                                <p class="card__description">
                                     A Extreme Programming (XP) é uma abordagem ágil que visa melhorar a qualidade do
-                                    software e
-                                    a capacidade de resposta a mudanças. Baseia-se em valores como comunicação,
-                                    simplicidade,
-                                    feedback e coragem para criar software de alta qualidade.
+                                    software e a capacidade de resposta a mudanças. Baseia-se em valores como
+                                    comunicação,
+                                    simplicidade, feedback e coragem para criar software de alta qualidade.
                                 </p>
                             </div>
-                            <img class="xp-image" src="images/xp.jpeg">
+                            <img class="xp-header__image" src="images/xp.jpeg"
+                                alt="Ilustração de Programação em Par XP">
                         </div>
-                        <ul class="xp-list">
-                            <li>
-                                <i class="fa-solid fa-circle-check green-color"></i>
-                                Programação em Par
+
+                        <ul class="pill-list">
+                            <li class="pill"><i class="fa-solid fa-circle-check text--green"></i> Programação em Par
                             </li>
-                            <li>
-                                <i class="fa-solid fa-circle-check green-color"></i>
-                                Testes Automatizados
+                            <li class="pill"><i class="fa-solid fa-circle-check text--green"></i> Testes Automatizados
                             </li>
-                            <li>
-                                <i class="fa-solid fa-circle-check green-color"></i>
-                                Integração Contínua
+                            <li class="pill"><i class="fa-solid fa-circle-check text--green"></i> Integração Contínua
                             </li>
-                            <li>
-                                <i class="fa-solid fa-circle-check green-color"></i>
-                                Programação em Par
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-circle-check green-color"></i>
-                                Refatoração
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-circle-check green-color"></i>
-                                Simplicidade
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-circle-check green-color"></i>
-                                Feedback Contínuo
-                            </li>
+                            <li class="pill"><i class="fa-solid fa-circle-check text--green"></i> Refatoração</li>
+                            <li class="pill"><i class="fa-solid fa-circle-check text--green"></i> Simplicidade</li>
+                            <li class="pill"><i class="fa-solid fa-circle-check text--green"></i> Feedback Contínuo</li>
                         </ul>
                     </section>
                 </div>
 
-                <div class="ball-line">
-                    <span class="ball ball-yellow">3</span>
-                    <section class="regular-section" id="bdd">
-                        <h2 class="bold">3. Behavior-Driven Development (BDD)</h2>
-                        <p>
-                            BDD é uma prática que alinha o desenvolvimento de software com as necessidades do negócio.
+                <!-- 3. BDD -->
+                <div class="timeline__item">
+                    <span class="timeline__badge badge--yellow">3</span>
+                    <section class="card" id="bdd">
+                        <h2 class="card__title">3. Behavior-Driven Development (BDD)</h2>
+                        <p class="card__description">
+                            BDD é uma prática que alinha o desenvolvimento de software com as necessidades do negócio,
                             usando uma linguagem ubíqua. Testes são escritos em linguagem natural, facilitando a
-                            comunicação
-                            entre desenvolvedores e stakeholders.
+                            comunicação entre desenvolvedores e stakeholders.
                         </p>
-                        <div>
-                            <p><b class="red-color">Dado</b> que o usuário esta autenticado</p>
-                            <p><b class="red-color">Quando</b> ele acessa o painel principal</p>
-                            <p><b class="red-color">Então</b> ele deve ver o resumo das suas atividades</p>
+
+                        <div class="gherkin-box">
+                            <p><strong class="text--red">Dado</strong> que o usuário está autenticado</p>
+                            <p><strong class="text--red">Quando</strong> ele acessa o painel principal</p>
+                            <p><strong class="text--red">Então</strong> ele deve ver o resumo das suas atividades</p>
                         </div>
                     </section>
                 </div>
 
-                <div class="ball-line">
-                    <span class="ball ball-red">4</span>
-                    <section class="regular-section" id="tdd">
-                        <h2 class="bold">4. Test-Driven Development (TDD)</h2>
-                        <p>
+                <!-- 4. TDD -->
+                <div class="timeline__item">
+                    <span class="timeline__badge badge--red">4</span>
+                    <section class="card" id="tdd">
+                        <h2 class="card__title">4. Test-Driven Development (TDD)</h2>
+                        <p class="card__description">
                             TDD é uma abordagem onde os testes são escritos antes do código de produção.
                             O ciclo Red-Green-Refactor garante código funcional, seguro e de qualidade.
                         </p>
-                        <div class="idk flex-gap">
-                            <section>
-                                <h3 class="red-color">Red</h3>
+
+                        <div class="tdd-flow">
+                            <div class="tdd-step tdd-step--red">
+                                <h3 class="text--red">Red</h3>
                                 <p>Escreva um teste que falha.</p>
-                            </section>
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                            <section>
-                                <h3 class="green-color">Green</h3>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right-long tdd-flow__arrow"></i>
+
+                            <div class="tdd-step tdd-step--green">
+                                <h3 class="text--green">Green</h3>
                                 <p>Escreva o código mínimo para passar no teste.</p>
-                            </section>
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                            <section>
-                                <h3 class="purple-color">Refactor</h3>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right-long tdd-flow__arrow"></i>
+
+                            <div class="tdd-step tdd-step--purple">
+                                <h3 class="text--purple">Refactor</h3>
                                 <p>Melhore o código mantendo os testes passando.</p>
-                            </section>
+                            </div>
                         </div>
                     </section>
                 </div>
 
-                <div class="ball-line">
-                    <span class="ball ball-purple">5</span>
-                    <section class="regular-section">
-                        <h2 class="bold">5. Métricas e Benefícios da Adoção</h2>
+                <!-- 5. MÉTRICAS -->
+                <div class="timeline__item">
+                    <span class="timeline__badge badge--purple">5</span>
+                    <section class="card">
+                        <h2 class="card__title">5. Métricas e Benefícios da Adoção</h2>
 
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Métrica</th>
-                                    <th>Sem Metodologias</th>
-                                    <th>Com Metodologias</th>
-                                    <th>Melhoria</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Taxa de Entrega</td>
-                                    <td>45%</td>
-                                    <td>92%</td>
-                                    <td class="green-color">104%</td>
-                                </tr>
-                                <tr>
-                                    <td>Defeitos em Produção</td>
-                                    <td>28%</td>
-                                    <td>5%</td>
-                                    <td class="green-color">82%</td>
-                                </tr>
-                                <tr>
-                                    <td>Satisfação do Cliente</td>
-                                    <td>65%</td>
-                                    <td>96%</td>
-                                    <td class="green-color">48%</td>
-                                </tr>
-                                <tr>
-                                    <td>Tempo de Resposta</td>
-                                    <td>14 dias</td>
-                                    <td>3 dias</td>
-                                    <td class="green-color">79%</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-wrapper">
+                            <table class="metrics-table">
+                                <thead>
+                                    <tr>
+                                        <th>Métrica</th>
+                                        <th>Sem Metodologias</th>
+                                        <th>Com Metodologias</th>
+                                        <th>Melhoria</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Taxa de Entrega</td>
+                                        <td>45%</td>
+                                        <td>92%</td>
+                                        <td class="text--green fw-bold"><i class="fa-solid fa-arrow-up"></i> 104%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Defeitos em Produção</td>
+                                        <td>28%</td>
+                                        <td>5%</td>
+                                        <td class="text--green fw-bold"><i class="fa-solid fa-arrow-down"></i> 82%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Satisfação do Cliente</td>
+                                        <td>65%</td>
+                                        <td>96%</td>
+                                        <td class="text--green fw-bold"><i class="fa-solid fa-arrow-up"></i> 48%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tempo de Resposta</td>
+                                        <td>14 dias</td>
+                                        <td>3 dias</td>
+                                        <td class="text--green fw-bold"><i class="fa-solid fa-arrow-down"></i> 79%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </section>
                 </div>
 
-                <div class="ball-line">
-                    <span class="ball ball-teal">6</span>
-                    <section class="regular-section">
-                        <h2 class="bold">6. Dúvidas Frequentes</h2>
-                        <details>
-                            <summary>Qual a diferença entre Scrum e XP?</summary>
-                        </details>
-                        <details>
-                            <summary>Posso usar BDD sem TDD?</summary>
-                        </details>
-                        <details>
-                            <summary>Por que TDD melhora a qualidade?</summary>
-                        </details>
-                        <details>
-                            <summary>Essas metodologias funcionam juntas?</summary>
-                        </details>
-                        <details>
-                            <summary>Por onde começar?</summary>
-                        </details>
-                        <img class="laptop-image" src="images/laptop.jpeg">
+                <!-- 6. FAQ -->
+                <div class="timeline__item">
+                    <span class="timeline__badge badge--teal">6</span>
+                    <section class="card" id="faq">
+                        <h2 class="card__title">6. Dúvidas Frequentes</h2>
+
+                        <div class="faq-grid">
+                            <div class="faq-list">
+                                <details class="faq-item">
+                                    <summary>Qual a diferença entre Scrum e XP? <i class="fa-solid fa-chevron-down"></i>
+                                    </summary>
+                                    <p>O Scrum foca na gestão e organização do fluxo de trabalho, enquanto o XP foca em
+                                        práticas técnicas de engenharia de software.</p>
+                                </details>
+                                <details class="faq-item">
+                                    <summary>Posso usar BDD sem TDD? <i class="fa-solid fa-chevron-down"></i></summary>
+                                    <p>Sim, embora funcionem muito bem juntos: BDD valida o comportamento do negócio e
+                                        TDD garante a qualidade das unidades de código.</p>
+                                </details>
+                                <details class="faq-item">
+                                    <summary>Por que TDD melhora a qualidade? <i class="fa-solid fa-chevron-down"></i>
+                                    </summary>
+                                    <p>Força o design modular desde o início e cria uma rede de segurança contra
+                                        regressões.</p>
+                                </details>
+                                <details class="faq-item">
+                                    <summary>Essas metodologias funcionam juntas? <i
+                                            class="fa-solid fa-chevron-down"></i></summary>
+                                    <p>Sim. É comum usar Scrum para gestão de sprints, XP para práticas de código, BDD
+                                        para critérios de aceite e TDD nos testes unitários.</p>
+                                </details>
+                                <details class="faq-item">
+                                    <summary>Por onde começar? <i class="fa-solid fa-chevron-down"></i></summary>
+                                    <p>Comece adotando ciclos curtos de entrega, revisões de código e testes
+                                        automatizados nas partes críticas do sistema.</p>
+                                </details>
+                            </div>
+
+                            <div class="faq-illustration">
+                                <img src="images/laptop.jpeg" alt="Ilustração de dúvidas frequentes">
+                            </div>
+                        </div>
                     </section>
                 </div>
 
-                <div class="ball-line ball-line-last">
-                    <span class="ball ball-blue">7</span>
-                    <section class="regular-section">
-                        <h2 class="bold">7. Fale Conosco</h2>
+                <!-- 7. FALE CONOSCO -->
+                <div class="timeline__item timeline__item--last">
+                    <span class="timeline__badge badge--blue">7</span>
+                    <section class="card" id="contato">
+                        <h2 class="card__title">7. Fale Conosco</h2>
 
+                        <div class="contact-grid">
+                            <div class="contact-info">
+                                <div class="contact-info__icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h3 class="contact-info__title">Tem alguma dúvida ou sugestão?</h3>
+                                    <p class="contact-info__text">
+                                        Nossa equipe está pronta para ajudar você a evoluir na sua jornada de
+                                        aprendizado.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <form class="contact-form">
+                                <div class="contact-form__row">
+                                    <input class="form-control" type="text" placeholder="Nome Completo" required>
+                                    <input class="form-control" type="email" placeholder="E-mail Profissional" required>
+                                </div>
+
+                                <div class="contact-form__row">
+                                    <input class="form-control" type="text" placeholder="Assunto" list="assunto-opcoes">
+                                    <input class="form-control" type="text" placeholder="Subtópico"
+                                        list="subtopico-opcoes">
+                                    <datalist id="assunto-opcoes">
+                                        <option value="Scrum e Agilidade">
+                                        <option value="XP, TDD e BDD">
+                                        <option value="Suporte Técnico">
+                                    </datalist>
+                                    <datalist id="subtopico-opcoes">
+                                        <option value="Dúvida de Conteúdo">
+                                        <option value="Sugestão">
+                                    </datalist>
+                                </div>
+
+                                <textarea class="form-control form-control--textarea" rows="3"
+                                    placeholder="Mensagem"></textarea>
+
+                                <div class="radio-group">
+                                    <span class="radio-group__label">Nível profissional:</span>
+                                    <label class="check-label">
+                                        <input name="nivelprofissional" type="radio" value="iniciante" checked>
+                                        Iniciante
+                                    </label>
+                                    <label class="check-label">
+                                        <input name="nivelprofissional" type="radio" value="intermediario">
+                                        Intermediário
+                                    </label>
+                                    <label class="check-label">
+                                        <input name="nivelprofissional" type="radio" value="avancado"> Avançado
+                                    </label>
+                                </div>
+
+                                <label class="check-label">
+                                    <input type="checkbox"> Quero receber e-mails
+                                </label>
+
+                                <button class="btn btn--full" type="submit">
+                                    <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+                                </button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- CTA BANNER -->
+                <div class="timeline__item timeline__item--cta" id="desafio">
+                    <section class="card cta-banner">
                         <div>
-                            <i class="fa-solid fa-envelope purple-color"></i>
-                            <h3 class="bold">Tem alguma dúvida ou sugestão</h3>
-                            <p>
-                                Nossa equipe está pronta
-                                para ajudar você a evoluir
-                                na sua jornada de aprendizado.
+                            <h2 class="card__title">Comece seu Desafio!</h2>
+                            <p class="card__description">
+                                Teste seus conhecimentos sobre as metodologias modernas e veja como está na sua
+                                compreensão sobre o assunto.
                             </p>
                         </div>
 
-                        <form>
-                            <input type="text" placeholder="Nome Completo">
-                            <input type="email" placeholder="E-mail Profissional">
-
-                            <label for="navegador">Escolha ou digite um navegador:</label>
-                            <input type="text" placeholder="Assunto" list="list-template">
-                            <input type="text" list="list-template">
-
-                            <datalist id="list-template">
-                                <option value="1">
-                                <option value="2">
-                            </datalist>
-
-                            <input type="text" placeholder="Mensagem">
-
-                            <label>
-                                <input name="nivelprofissional" type="radio">
-                                Iniciante
-                            </label>
-
-                            <label>
-                                <input name="nivelprofissional" type="radio">
-                                Intermediário
-                            </label>
-
-                            <label>
-                                <input name="nivelprofissional" type="radio">
-                                Avançado
-                            </label>
-
-                            <label>
-                                <input type="checkbox">
-                                Quero receber e-mails
-                            </label>
-
-                            <button class="btn" type="submit">
-                                <i class="fa-solid fa-paper-plane"></i>
-                                Enviar Mensagem
-                            </button>
-                        </form>
-                    </section>
-                </div>
-
-                <div class="ball-line ball-line-last">
-                    <section class="regular-section row-section">
-                        <div>
-                            <h2 class="bold">Comece seu Desafio!</h2>
-                            <p>
-                                Teste seus conhecimentos sobre as metodologias modernas
-                                e veja como está na sua compreensão sobre o assunto.
-                            </p>
-                        </div>
-
-                        <a class="btn" href="">
-                            <i class="fa-solid fa-circle-question"></i>
-                            Começar Quiz
+                        <a class="btn btn--lg" href="">
+                            <i class="fa-solid fa-circle-question"></i> Começar Quiz
                         </a>
                     </section>
                 </div>
@@ -446,74 +422,67 @@
         </div>
     </main>
 
-    <footer>
-        <div class="idk">
-            <div class="flex-2 vertical-flex">
-                <div class="flex-2 gap-logo">
-                    <img class="enterprise-icon" src="images/logo.png">
-                    <p class="white-color weight-450 big-font">DevMastery<br><b class="purple-color weight-450">EDU</b>
-                    </p>
-                </div>
-
-                <p class="white-color">
-                    Plataforma educacional para desenvolvedores
-                    que querem dominar as metodologias modernas
-                    de desenvolvimento de software.
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="brand">
+                    <img class="brand__logo" src="images/logo.png" alt="Logo DevMastery EDU">
+                    <span class="brand__name">DevMastery<br><strong class="brand__sub">EDU</strong></span>
+                </a>
+                <p class="footer-brand__desc">
+                    Plataforma educacional para desenvolvedores que querem dominar as metodologias modernas de
+                    desenvolvimento de software.
                 </p>
-
-                <nav>
-                    <a href=""><i class="fa-brands fa-github"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                    <a href=""><i class="fa-brands fa-discord"></i></a>
-                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <nav class="social-links" aria-label="Redes sociais">
+                    <a href="" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </nav>
             </div>
 
-            <div class="flex">
-                <nav class="flex-2 vertical-flex">
-                    <h2 class="white-color">Estudantes</h2>
-                    <a href="">Cursos</a>
-                    <a href="">Certificações</a>
-                    <a href="">Portal do Aluno</a>
-                    <a href="">Trilhas de Aprendizado</a>
-                </nav>
+            <nav class="footer-col">
+                <h3>Estudantes</h3>
+                <a href="">Cursos</a>
+                <a href="">Certificações</a>
+                <a href="">Portal do Aluno</a>
+                <a href="">Trilhas de Aprendizado</a>
+            </nav>
 
-                <nav class="flex-2 vertical-flex">
-                    <h2 class="white-color">Recursos</h2>
-                    <a href="">Documentação</a>
-                    <a href="">Guias</a>
-                    <a href="">Blog</a>
-                    <a href="">Tutoriais</a>
-                </nav>
+            <nav class="footer-col">
+                <h3>Recursos</h3>
+                <a href="">Documentação</a>
+                <a href="">Guias</a>
+                <a href="">Blog</a>
+                <a href="">Tutoriais</a>
+            </nav>
 
-                <nav class="flex-2 vertical-flex">
-                    <h2 class="white-color">Comunidade</h2>
-                    <a href="">Fórum</a>
-                    <a href="">Discord</a>
-                    <a href="">Eventos</a>
-                    <a href="">Contribua</a>
-                </nav>
+            <nav class="footer-col">
+                <h3>Comunidade</h3>
+                <a href="">Fórum</a>
+                <a href="">Discord</a>
+                <a href="">Eventos</a>
+                <a href="">Contribua</a>
+            </nav>
 
-                <form>
-                    <h2 class="white-color">Newsletter</h2>
-                    <p class="white-color">
-                        Receba conteúdos e novidades
-                        exclusivas toda semana.
-                    </p>
-                    <div class="flex-2">
-                        <input class="dark-input" placeholder="Seu melhor e-mail" type="email">
-                        <button class="btn connected-submit" type="submit"><i
-                                class="fa-solid fa-paper-plane"></i></button>
-                    </div>
-                </form>
-            </div>
+            <form class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Receba conteúdos e novidades exclusivas toda semana.</p>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button class="btn" type="submit" aria-label="Inscrever-se">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
         </div>
 
-        <div class="flex">
-            <p class="white-color">&copy; 2026 DevMastery EDU. Todos os direitos reservados.</p>
-
-            <div>
+        <div class="footer-bottom">
+            <p>© 2026 DevMastery EDU. Todos os direitos reservados.</p>
+            <div class="footer-bottom__links">
                 <a href="">Política de Privacidade</a>
+                <span>|</span>
                 <a href="">Termos de Uso</a>
             </div>
         </div>
