@@ -26,7 +26,7 @@ It's that simple!
 - HTML
 - CSS
 
-Everything was done with HTML and CSS only, no ~~JavaScript~~ included!
+Everything was done with HTML, CSS and FontAwesome icons only, no ~~JavaScript~~ included!
 
 ## Notes
 
