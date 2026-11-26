@@ -395,7 +395,10 @@ img {
     background-color: var(--bg-muted);
 }
 
-.sidebar__link.is-active {
+.page-layout:not(:has(#extremeprogramming:target, #bdd:target, #tdd:target)) .sidebar__link[href="#scrum"],
+.page-layout:has(#extremeprogramming:target) .sidebar__link[href="#extremeprogramming"],
+.page-layout:has(#bdd:target) .sidebar__link[href="#bdd"],
+.page-layout:has(#tdd:target) .sidebar__link[href="#tdd"] {
     background-color: var(--brand-soft);
     color: var(--brand-primary);
     font-weight: 600;
