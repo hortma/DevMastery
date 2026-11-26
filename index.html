@@ -37,41 +37,17 @@
             <img class="user-menu__avatar" src="images/perfil.jpg" alt="Foto de perfil">
             <details class="user-menu__dropdown">
                 <summary aria-label="Opções do perfil"><i class="fa-solid fa-chevron-down"></i></summary>
+                <div class="user-menu__options">
+                    <a class="user-menu__option" href=""><i class="fa-solid fa-user-pen"></i> Editar Perfil</a>
+                    <a class="user-menu__option" href=""><i class="fa-solid fa-gear"></i> Configurações</a>
+                    <a class="user-menu__option" href=""><i class="fa-solid fa-moon"></i> Acessibilidade</a>
+                    <a class="user-menu__option" href=""><i class="fa-solid fa-power-off"></i> Sair</a>
+                </div>
             </details>
         </div>
     </header>
 
     <main>
-        <!-- ================= HERO SECTION ================= -->
-        <section class="hero">
-            <div class="hero__showcase">
-                <h1 class="hero__title">
-                    <span class="hero__title-top">O Fluxo do</span>
-                    <span class="hero__title-main">Desenvolvimento</span>
-                    <span class="hero__title-bottom">Moderno</span>
-                </h1>
-                <img class="hero__laptop" src="images/computador.png" alt="Notebook exibindo código">
-            </div>
-
-            <div class="hero__cards">
-                <article class="glass-card">
-                    <img class="glass-card__icon" src="images/layers.png" alt="Ícone de camadas">
-                    <div>
-                        <h2 class="glass-card__title">Dominando Z-index</h2>
-                        <p class="glass-card__text">Aprenda o poder do posicionamento e empilhamento de elementos.</p>
-                    </div>
-                </article>
-
-                <article class="glass-card">
-                    <img class="glass-card__icon" src="images/3d.png" alt="Ícone 3D">
-                    <div>
-                        <h2 class="glass-card__title">Camada Inferior</h2>
-                        <p class="glass-card__text">Esta camada está na camada mais baixa (z-index: 0).</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
         <!-- ================= PAGE BODY (SIDEBAR + TIMELINE) ================= -->
         <div class="page-layout">
             <!-- SIDEBAR -->
@@ -99,15 +75,6 @@
                     <a class="btn btn--full" href="#desafio">
                         <i class="fa-solid fa-circle-question"></i> Começar Quiz
                     </a>
-                </div>
-
-                <div class="promo-card">
-                    <img class="promo-card__image" src="images/livro.jpeg" alt="Ilustração de aprendizado prático">
-                    <h3 class="promo-card__title">Aprenda na prática</h3>
-                    <p class="promo-card__text">
-                        Domine as metodologias modernas de desenvolvimento de software com exemplos reais e exercícios
-                        práticos.
-                    </p>
                 </div>
             </aside>
 
@@ -346,7 +313,7 @@
                         <div class="contact-grid">
                             <div class="contact-info">
                                 <div class="contact-info__icon">
-                                    <i class="fa-solid fa-envelope"></i>
+                                    <i class="fa-solid fa-envelope fa-lg"></i>
                                 </div>
                                 <div>
                                     <h3 class="contact-info__title">Tem alguma dúvida ou sugestão?</h3>
@@ -357,15 +324,18 @@
                                 </div>
                             </div>
 
-                            <form class="contact-form">
+                            <form method="POST" action="" class="contact-form">
                                 <div class="contact-form__row">
-                                    <input class="form-control" type="text" placeholder="Nome Completo" required>
-                                    <input class="form-control" type="email" placeholder="E-mail Profissional" required>
+                                    <input class="form-control" name="nome" type="text" placeholder="Nome Completo"
+                                        required>
+                                    <input class="form-control" name="email" type="email"
+                                        placeholder="E-mail Profissional" required>
                                 </div>
 
                                 <div class="contact-form__row">
-                                    <input class="form-control" type="text" placeholder="Assunto" list="assunto-opcoes">
-                                    <input class="form-control" type="text" placeholder="Subtópico"
+                                    <input class="form-control" name="assunto" type="text" placeholder="Assunto"
+                                        list="assunto-opcoes">
+                                    <input class="form-control" name="subtopico" type="text" placeholder="Subtópico"
                                         list="subtopico-opcoes">
                                     <datalist id="assunto-opcoes">
                                         <option value="Scrum e Agilidade">
@@ -378,7 +348,7 @@
                                     </datalist>
                                 </div>
 
-                                <textarea class="form-control form-control--textarea" rows="3"
+                                <textarea class="form-control form-control--textarea" name="mensagem" rows="3"
                                     placeholder="Mensagem"></textarea>
 
                                 <div class="radio-group">
@@ -397,7 +367,7 @@
                                 </div>
 
                                 <label class="check-label">
-                                    <input type="checkbox"> Quero receber e-mails
+                                    <input name="receberemails" type="checkbox"> Quero receber e-mails
                                 </label>
 
                                 <button class="btn btn--full" type="submit">
@@ -411,20 +381,63 @@
                 <!-- CTA BANNER -->
                 <div class="timeline__item timeline__item--cta" id="desafio">
                     <section class="card cta-banner">
-                        <div>
-                            <h2 class="card__title">Comece seu Desafio!</h2>
-                            <p class="card__description">
-                                Teste seus conhecimentos sobre as metodologias modernas e veja como está na sua
-                                compreensão sobre o assunto.
-                            </p>
+                        <div class="cta-banner__header">
+                            <div>
+                                <h2 class="card__title">Comece seu Desafio!</h2>
+                                <p class="card__description">
+                                    Teste seus conhecimentos sobre as metodologias modernas e veja como está na sua
+                                    compreensão sobre o assunto.
+                                </p>
+                            </div>
+
+                            <a class="btn btn--lg" href="">
+                                <i class="fa-solid fa-circle-question"></i> Começar Quiz
+                            </a>
                         </div>
 
-                        <a class="btn btn--lg" href="">
-                            <i class="fa-solid fa-circle-question"></i> Começar Quiz
-                        </a>
+                        <div class="promo-card">
+                            <img class="promo-card__image" src="images/livro.jpeg"
+                                alt="Ilustração de aprendizado prático">
+                            <h3 class="promo-card__title">Aprenda na prática</h3>
+                            <p class="promo-card__text">
+                                Domine as metodologias modernas de desenvolvimento de software com exemplos reais e
+                                exercícios
+                                práticos.
+                            </p>
+                        </div>
                     </section>
                 </div>
             </div>
+            <!-- ================= HERO SECTION ================= -->
+            <section class="hero">
+                <div class="hero__showcase">
+                    <h1 class="hero__title">
+                        <span class="hero__title-top">O Fluxo do</span>
+                        <span class="hero__title-main">Desenvolvimento</span>
+                        <span class="hero__title-bottom">Moderno</span>
+                    </h1>
+                    <img class="hero__laptop" src="images/computador.png" alt="Notebook exibindo código">
+                </div>
+
+                <div class="hero__cards">
+                    <article class="glass-card">
+                        <img class="glass-card__icon" src="images/layers.png" alt="Ícone de camadas">
+                        <div>
+                            <h2 class="glass-card__title">Dominando Z-index</h2>
+                            <p class="glass-card__text">Aprenda o poder do posicionamento e empilhamento de elementos.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="glass-card">
+                        <img class="glass-card__icon" src="images/3d.png" alt="Ícone 3D">
+                        <div>
+                            <h2 class="glass-card__title">Camada Inferior</h2>
+                            <p class="glass-card__text">Esta camada está na camada mais baixa (z-index: 0).</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -472,7 +485,7 @@
                 <a href="">Contribua</a>
             </nav>
 
-            <form class="footer-newsletter">
+            <form method="POST" action="" class="footer-newsletter">
                 <h3>Newsletter</h3>
                 <p>Receba conteúdos e novidades exclusivas toda semana.</p>
                 <div class="newsletter-box">

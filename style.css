@@ -38,6 +38,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 84px;
 }
 
 body {
@@ -117,6 +118,9 @@ img {
    2. HEADER & NAVIGATION
    ========================================================================== */
 .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -170,6 +174,7 @@ img {
 }
 
 .user-menu {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -187,8 +192,18 @@ img {
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
     color: var(--text-light);
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.user-menu__dropdown summary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
 }
 
 .user-menu__dropdown summary::-webkit-details-marker {
@@ -206,17 +221,101 @@ img {
     transform: rotate(180deg);
 }
 
+.user-menu__options {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    z-index: 110;
+    min-width: 195px;
+    max-width: calc(100vw - 32px);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    background-color: var(--bg-dark);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    transform-origin: top right;
+}
+
+.user-menu__dropdown[open] .user-menu__options {
+    animation: dropdown-enter 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes dropdown-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.user-menu__option {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #CBD5E1;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.user-menu__option i {
+    width: 16px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #94A3B8;
+    transition: color 0.2s ease;
+}
+
+.user-menu__option:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    transform: translateX(2px);
+}
+
+.user-menu__option:hover i {
+    color: #6C5CE7;
+}
+
+.user-menu__option:last-child {
+    margin-top: 4px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-menu__option:last-child:hover {
+    background-color: rgba(252, 75, 81, 0.14);
+    color: var(--accent-red);
+}
+
+.user-menu__option:last-child:hover i {
+    color: var(--accent-red);
+}
+
 /* ==========================================================================
-   3. HERO & Z-INDEX SHOWCASE
+3. HERO & Z-INDEX SHOWCASE
    ========================================================================== */
 .hero {
     position: relative;
     isolation: isolate;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 32px;
-    padding: 36px 48px 0;
+    width: 300px;
+    flex-shrink: 0;
+    padding: 32px 20px;
     background-color: #090D1E;
     overflow: hidden;
 }
@@ -233,57 +332,56 @@ img {
 
 .hero__showcase {
     position: relative;
-    display: grid;
-    flex: 1;
-    min-width: 0;
-}
-
-.hero__showcase>* {
-    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
 }
 
 .hero__title {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    justify-self: start;
-    padding-bottom: 24px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: start;
+    column-gap: 4px;
+    row-gap: 8px;
+    width: 100%;
 }
 
 .hero__title-top {
-    position: relative;
-    z-index: 1;
-    align-self: flex-start;
-    margin-left: 8%;
-    font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+    grid-column: 2;
+    grid-row: 1;
+    writing-mode: vertical-rl;
+    margin-top: 10px;
+    font-size: 1.45rem;
     font-weight: 700;
+    line-height: 1.1;
     color: #FFFFFF;
 }
 
 .hero__title-main {
-    position: relative;
-    z-index: 1;
-    font-size: clamp(2.6rem, 6.2vw, 5.4rem);
+    grid-column: 1;
+    grid-row: 1;
+    writing-mode: vertical-rl;
+    font-size: 3.35rem;
     font-weight: 900;
-    line-height: 1.05;
-    background: linear-gradient(75deg, #BC6AFF, var(--accent-blue));
+    line-height: 0.95;
+    background: linear-gradient(180deg, #BC6AFF, var(--accent-blue));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
 .hero__title-bottom {
-    position: relative;
-    z-index: 1;
-    align-self: flex-end;
-    margin-right: 0;
-    margin-top: -0.12em;
-    transform: translateX(35%);
-    font-size: clamp(2.2rem, 4.8vw, 4.2rem);
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    font-size: 2.5rem;
     font-weight: 900;
     line-height: 1.05;
-    background: linear-gradient(75deg, #FFFFFF, #7C5CFF);
+    background: linear-gradient(90deg, #FFFFFF, #7C5CFF);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -292,28 +390,26 @@ img {
 .hero__laptop {
     position: relative;
     z-index: 2;
-    align-self: end;
-    justify-self: start;
-    margin-left: 14%;
-    width: clamp(180px, 28vw, 360px);
+    width: 100%;
+    max-width: 245px;
+    margin-top: 4px;
     filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.75));
-    opacity: 80%;
+    opacity: 0.9;
 }
 
 .hero__cards {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding-bottom: 36px;
-    flex-shrink: 0;
+    width: 100%;
 }
 
 .glass-card {
     display: flex;
     align-items: center;
-    gap: 14px;
-    width: 280px;
-    padding: 16px;
+    gap: 12px;
+    width: 100%;
+    padding: 14px;
     background: rgba(15, 20, 45, 0.55);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -323,8 +419,8 @@ img {
 }
 
 .glass-card__icon {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     flex-shrink: 0;
     object-fit: cover;
     object-position: center;
@@ -332,14 +428,14 @@ img {
 }
 
 .glass-card__title {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 4px;
 }
 
 .glass-card__text {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     line-height: 1.35;
     color: #CBD5E1;
 }
@@ -405,7 +501,8 @@ img {
 }
 
 .promo-card {
-    margin-top: 12px;
+    width: 350px;
+    max-width: 100%;
     padding: 18px 14px;
     background-color: #F4F5FB;
     border-radius: var(--radius-md);
@@ -413,7 +510,7 @@ img {
 }
 
 .promo-card__image {
-    width: 200px;
+    width: 50%;
     margin: 0 auto 12px;
     border-radius: var(--radius-sm);
 }
@@ -535,6 +632,7 @@ img {
 .sub-card {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 12px;
     padding: 16px;
     border: 1px solid var(--border-color);
@@ -742,8 +840,10 @@ img {
 }
 
 .faq-illustration img {
-    max-width: 400px;
+    width: 400px;
     margin: 0 auto;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
 }
 
 /* 7. Contact Form */
@@ -840,6 +940,14 @@ img {
 
 /* Final CTA Banner */
 .cta-banner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.cta-banner__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -979,9 +1087,8 @@ img {
    ========================================================================== */
 @media (max-width: 1024px) {
     .hero {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 28px 24px 0;
+        width: 100%;
+        padding: 32px 24px;
     }
 
     .hero__cards {
@@ -1021,6 +1128,10 @@ img {
         padding: 14px 20px;
     }
 
+    .user-menu {
+        margin-left: auto;
+    }
+
     .timeline {
         padding: 20px 16px 36px;
     }
@@ -1034,7 +1145,7 @@ img {
 
     .xp-header,
     .tdd-flow,
-    .cta-banner {
+    .cta-banner__header {
         flex-direction: column;
         align-items: stretch;
     }
@@ -1046,5 +1157,15 @@ img {
 
     .footer-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 360px) {
+    .user-menu__options {
+        min-width: 170px;
+    }
+
+    .user-menu__option {
+        white-space: normal;
     }
 }
